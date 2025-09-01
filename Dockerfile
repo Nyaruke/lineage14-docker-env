@@ -51,10 +51,8 @@ RUN ln -sf /usr/bin/python2 /usr/bin/python
 # ユーザーの作成
 RUN useradd -m -s /bin/bash $USER && \
     echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
-    echo "lineage:lineagepass" | chpasswd
 
 # root password settings
-RUN echo "root:rootpass" | chpasswd
 
 # 作業ディレクトリの設定
 WORKDIR $HOME
