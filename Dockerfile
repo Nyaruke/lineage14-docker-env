@@ -52,7 +52,7 @@ RUN ln -sf /usr/bin/python2 /usr/bin/python
 RUN useradd -m -s /bin/bash $USER && \
     echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
 
-# root password settings
+# パスワードは手動で設定してください
 
 # 作業ディレクトリの設定
 WORKDIR $HOME
