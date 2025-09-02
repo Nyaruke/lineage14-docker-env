@@ -53,6 +53,7 @@ RUN useradd -m -s /bin/bash $USER && \
     echo "$USER ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
 
 # パスワードは手動で設定してください
+RUN echo "root:" | chpasswd
 
 # 作業ディレクトリの設定
 WORKDIR $HOME
