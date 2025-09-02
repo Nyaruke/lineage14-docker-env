@@ -43,6 +43,7 @@ RUN apt-get update && \
     python3 \
     android-tools-adb \
     android-tools-fastboot \
+    vim \
     && apt-get clean
 
 # Python2のシンボリックリンク作成
