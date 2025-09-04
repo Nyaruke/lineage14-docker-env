@@ -57,10 +57,10 @@ RUN useradd -m -s /bin/bash $USER && \
 RUN echo "root:" | chpasswd
 
 # 作業ディレクトリの設定
-WORKDIR $HOME
+# WORKDIR $HOME
 
 # repoツールのインストール
 RUN curl https://storage.googleapis.com/git-repo-downloads/repo > /usr/local/bin/repo && \
     chmod a+x /usr/local/bin/repo
 
-USER $USER
+USER root
